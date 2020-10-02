@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import FrontPage from './FrontPage';
 import "./style.css";
 
+
+// function for signup
 function SignUp() {
     const initialState = {
         userInfo: {
@@ -13,6 +15,7 @@ function SignUp() {
         errormsg: '',
     };
 
+    // submit form containing input details
     const submitform = async (data) => {
         //Submit action
         if (state.userInfo.name.length == 0 || state.userInfo.email.length == 0 || state.userInfo.password.length == 0) {
@@ -30,6 +33,8 @@ function SignUp() {
         }
 
     };
+    
+    // setting up the initial stage
     const [state, setState] = useState(initialState);
     const onChangeValue = (e) => {
         setState({
